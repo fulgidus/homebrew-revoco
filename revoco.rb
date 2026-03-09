@@ -5,7 +5,7 @@
 class Revoco < Formula
   desc "Data liberation tool for escaping big tech walled gardens"
   homepage "https://github.com/fulgidus/revoco"
-  version "0.1.10"
+  version "0.1.12"
   license "GPL-3.0"
 
   depends_on "exiftool"
@@ -13,16 +13,16 @@ class Revoco < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fulgidus/revoco/releases/download/v0.1.10/revoco_0.1.10_darwin_amd64.tar.gz"
-      sha256 "f43b1c76cbf72b6cedbbdbe23e9bb64d97fe71d29239d2122218681722534593"
+      url "https://github.com/fulgidus/revoco/releases/download/v0.1.12/revoco_0.1.12_darwin_amd64.tar.gz"
+      sha256 "d5ae276deabaae012aa960df26487bb66a53081e1cdb7d776424b287540479c7"
 
       define_method(:install) do
         bin.install "revoco"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fulgidus/revoco/releases/download/v0.1.10/revoco_0.1.10_darwin_arm64.tar.gz"
-      sha256 "b8890c84d546b4434ef1053b12e1514527a8083e42506ac1297be33bba73d2c4"
+      url "https://github.com/fulgidus/revoco/releases/download/v0.1.12/revoco_0.1.12_darwin_arm64.tar.gz"
+      sha256 "df60cf694cd723ea365cfcb9643e905b96bb23d03046ceec70eb4bdc966262f2"
 
       define_method(:install) do
         bin.install "revoco"
@@ -32,15 +32,15 @@ class Revoco < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fulgidus/revoco/releases/download/v0.1.10/revoco_0.1.10_linux_amd64.tar.gz"
-      sha256 "7b1fd4cc0230f7fc09c1929e4aef8e86229e7993e41cdd96210301c93de0d90f"
+      url "https://github.com/fulgidus/revoco/releases/download/v0.1.12/revoco_0.1.12_linux_amd64.tar.gz"
+      sha256 "a6077a2a5ae577a8c8fc8392f6a43c3c1601ca721bbffd447fddd09bff4f5bce"
       define_method(:install) do
         bin.install "revoco"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fulgidus/revoco/releases/download/v0.1.10/revoco_0.1.10_linux_arm64.tar.gz"
-      sha256 "b5993a9290936b6ce31acabb0cb601749b9c2ed7e0c59ad675df6d5cdc7fc213"
+      url "https://github.com/fulgidus/revoco/releases/download/v0.1.12/revoco_0.1.12_linux_arm64.tar.gz"
+      sha256 "4d132a1ee80a2da7b0cb0f55d4c6dbdb6f20310d38afc48f1c044300f8c34205"
       define_method(:install) do
         bin.install "revoco"
       end
